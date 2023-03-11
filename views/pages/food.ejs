@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="css/food.css">
+    </head>
+    <body>
+    
+        <!-- navbaar starts -->
+            <header>
+                <%-include('../partials/navbar.ejs') %>
+            </header>
+        <!-- navbaar ends -->
+
+        <!-- home section starts -->
+            <section class="home" id="home">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1610614819513-58e34989848b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhc3QlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+            </section>
+        <!-- home section ends -->
+
+        <!-- burger start -->
+            <section class="popular" id="popular">
+
+                <h1 class="heading">Burger</h1>
+
+                <div class="box-container">
+                    <% for(food of burgers) {%>
+                        <% if(food.type= 'burger') {%>
+                        <div class="box">
+                            <span class="price"><%- food.price %> TND </span>
+                            <img src="<%- food.image %>" alt="">
+                            <h3><%- food.name %></h3>
+                            <a href="" class="btn">Order Now</a>
+                        </div>
+                        <% } %>  
+                     <% } %>  
+                </div> 
+            </section>
+        <!-- burger ends -->
+
+        <!-- pizza start -->
+            <section class="popular" id="">
+
+                <h1 class="heading"> Pizza</h1>
+
+                <div class="box-container">
+                    <div class="box-container">
+                        <% for(food of pizzas) {%>
+                            <% if(food.type= 'pizza') {%>
+                            <div class="box">
+                                <span class="price"><%- food.price %> TND </span>
+                                <img src="<%- food.image %>" alt="">
+                                <h3><%- food.name %></h3>
+                                <a href="" class="btn">Order Now</a>
+                            </div>
+                            <% } %>  
+                         <% } %>  
+                    </div> 
+                </div>
+            </section>
+        <!-- pizza ends -->
+
+        <!-- makloub start -->
+            <section class="popular" id="">
+
+                <h1 class="heading"> Sandwich </h1>
+
+                <div class="box-container">
+                    <div class="box-container">
+                        <% for(food of sandwichs) {%>
+                            <% if(food.type= 'sandwich') {%>
+                            <div class="box">
+                                <span class="price"><%- food.price %> TND </span>
+                                <img src="<%- food.image %>" alt="">
+                                <h3><%- food.name %></h3>
+                                <a href="" class="btn">Order Now</a>
+                            </div>
+                            <% } %>  
+                         <% } %>  
+                    </div> 
+                </div>
+            </section>
+        <!-- makloub ends -->
+
+        <!-- footer section starts -->
+            <section class="footer">
+                <%-include('../partials/footer.ejs') %>  
+            </section>
+        <!-- footer section ends -->
+
+
+
+        <%-include('../partials/script.ejs') %>
+    </body>
+    </html>

@@ -1,0 +1,29 @@
+.footer{
+    text-align: center;
+    background-color: black;
+}
+
+.footer .share{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.footer .credit{
+    padding: 2.5rem 1rem;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.footer .credit span{
+    color: var(--red);
+}
+
+.footer .stars i{
+    color: gold;
+    font-size: 1.7rem;
+    padding:1rem 0.1rem;
+}

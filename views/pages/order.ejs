@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('../partials/head.ejs') %>
+
+        <link rel="stylesheet" href="css/order.css">
+
+    
+    </head>
+    <body>
+    
+        <!-- navbaar starts -->
+            <header>
+                <%-include('../partials/navbar.ejs') %>
+
+                </nav>
+            </header>
+        <!-- navbaar ends -->
+        
+        <!-- steps section starts -->
+            <section class="steps">
+
+              <%-include('../partials/order.ejs') %>
+
+            </section>
+        <!-- steps section ends -->
+            
+        <!-- form starts -->
+          <form class="rowg-3 form-in">
+            <h1>Réservation</h1>
+            <div class="box">
+              <div class=" box-in">
+                <label for="name" class="form-label" >Name</label>
+                <input type="email" class="form-control" id="inputEmail4" autofocus>
+              </div>
+              <div class=" box-in">
+                <label for="number" class="form-label" >Number Phone</label>
+                <input type="number" class="form-control" id="inputAddress" placeholder="+216">
+              </div>
+              <div class=" box-in">
+                <label for="email" class="form-label" >Email</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="@gmail.com">
+              </div>
+              <div class=" box-in">
+                <label for="nb" class="form-label" >Number De place</label>
+                <input type="number" class="form-control" id="nb" name="nb" placeholder="Enter Number De Place" >
+              </div>
+              <div class=" box-in">
+                <label for="heur" class="form-label" >Heur De Resevation</label>
+                <input type="text" class="form-control" id="heur" name="heur" placeholder="Enter Heur De Reservation" >
+              </div>
+              <div class="col-md-6 box-in">
+                <label for="date" class="form-label" > Date De Reservation</label>
+                <input type="date" class="form-control" id="date" name="date"   >
+              </div>
+            </div>
+            <div class="btnn">
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </div>
+            </div>
+          </form>
+        <!-- form ends -->
+
+        <!-- footer section starts -->
+            <section class="footer">
+
+                <%-include('../partials/footer.ejs') %>  
+
+                </div>  
+            </section>
+        <!-- footer section ends -->
+
+
+        <%-include('../partials/script.ejs') %>
+
+    </body>
+</html>

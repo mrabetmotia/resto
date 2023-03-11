@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="css/BreakFast.css">
+    
+  </head>
+  <body>
+    <!-- navbaar starts -->
+      <header>
+        <%-include('../partials/navbar.ejs') %>
+
+      </header>
+    <!-- navbaar ends -->
+
+    <!-- home section starts -->
+      <section class="home" id="home">
+
+        <div class="image">
+         <img src="https://media.istockphoto.com/photos/morning-breakfast-table-top-view-picture-id1287809109?b=1&k=20&m=1287809109&s=170667a&w=0&h=b0Zypy93tWhixawHa2cOnHra4RhFpvBehKe-AI8PwoY=" alt="">
+        </div>
+      </section>
+    <!-- home section ends -->
+
+    <!-- menu stars -->
+      <section class="popular" id="popular">
+
+        <h1 class="heading">breakfast</h1>
+
+        <div class="box-container">
+          <% for(box of breaks) { %>
+
+          <div class="box">
+
+              <span class="price"><%- box.price %> TND </span>
+              <img src="<%- box.image %>" alt="">
+              <h3><%- box.name %></h3>
+              <p><%- box.description %></p>
+              <a href="" class="btn">Order Now</a>
+          </div>
+          <% } %>
+      
+        </div>
+      </section>
+    <!-- menu ends -->
+
+    <!-- footer section starts -->
+      <section class="footer">
+
+        <%-include('../partials/footer.ejs') %>  
+
+      </section>
+    <!-- footer section ends -->
+
+  
+    <%-include('../partials/script.ejs') %>
+
+
+  </body>
+</html>

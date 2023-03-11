@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('../partials/head.ejs') %>
+
+    <link rel="stylesheet" href="css/delevry.css">
+  </head>
+  <body>
+    <!-- navbaar starts -->
+      <header>
+        <%-include('../partials/navbar.ejs') %>
+
+      </header>
+    <!-- navbaar ends -->
+          
+    <!-- steps section starts -->
+      <section class="steps">
+
+        <%-include('../partials/order.ejs') %>
+
+      </section>
+    <!-- steps section ends -->
+
+    <!-- formulaire starts -->
+      <form class="rowg-3 form-in">
+        <h1>Delivery</h1>
+        <div class="box">
+          <div class="col-md-6 box-in">
+            <label for="inputEmail4" class="form-label" >Nom et Prénom</label>
+            <input type="email" class="form-control" id="inputEmail4" autofocus>
+          </div>
+          <div class="col-md-6 box-in">
+            <label for="inputPassword4" class="form-label">Email</label>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="@gmail.com">
+          </div>
+          <div class="col-md-6 box-in">
+            <label for="inputAddress" class="form-label" >Votre Numéro</label>
+            <input type="number" class="form-control" id="inputAddress" placeholder="+216">
+          </div>
+          <div class="col-md-6 box-in">
+            <label for="inputAddress2" class="form-label">Votre Commande</label>
+            <input type="text" class="form-control" id="inputAddress2"  >
+          </div>
+          <div class="col-md-6 box-in ">
+            <label for="inputState" class="form-label">Ville</label>
+            <select id="inputState" class="form-select">
+              <option selected>Nabeul</option>
+              <option>Dar chaaben</option>
+              <option>Mrezga</option>
+              <option>Beni khiar</option>
+              <option>Hammemet</option>
+  
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+        </div>
+        <div class="btnn">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+        </div>
+      </form>
+    <!-- formulaire ends -->
+
+    <!-- footer section starts -->
+      <section class="footer">
+
+        <%-include('../partials/footer.ejs') %>  
+
+      </section>
+    <!-- footer section ends -->
+
+
+    <%-include('../partials/script.ejs') %>
+
+      
+  </body>
+</html>

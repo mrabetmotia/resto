@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/headadmin.ejs') %>
+
+    <title>Drink Adminn</title>
+    <style>
+        body{
+            background-image: url(https://info.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/trends%20drinks.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="a"><i class="fa fa-burger"></i>Resto Motia</a>
+
+    </header>
+    <%-include('../partials/sidebar.ejs') %>
+
+
+    <section>
+        <div class="row g-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Name To Produit" aria-label="Name To Produit">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Price" aria-label="Price">
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Discription" aria-label="Discription">
+            </div>
+        </div>
+    
+        <div class="row g-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Src To Image" aria-label="Src To Image">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Type" aria-label="Type">
+              </div>
+        </div>
+
+        <div class="row g-3" style="padding-top: 5%; ">
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+    </section>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/https://kit.fontawesome.com/307b76e7a2.js" crossorigin="anonymous"></script>
+</body>
+</html>

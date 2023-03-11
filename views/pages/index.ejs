@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+    <%-include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <!-- navbaar starts -->
+      <header>
+       <%-include('../partials/navbar.ejs') %>
+      </header>
+    <!-- navbaar ends -->
+
+    <!-- home section starts -->
+      <section class="home" id="home">
+        <div class="content">
+          <h3  id="h">Welcome to My Restaurent</h3>
+        </div>
+        <div class="image">
+          <img src="image/d.jpg" alt="">
+        </div>
+      </section>
+    <!-- home section ends -->
+
+    <!-- speciality section starts -->
+      <section class="speciality" id="speciality">
+
+        <h1 class="heading"> our <span>speciality</span> dishes</h1>
+
+        <div class="box-container">
+          <% for(resto of restos) {%>
+          <div class="box">
+            <img classe="image" src="<%- resto.image %>" alt="">
+            <div class="content">
+              
+              <h3><%- resto.name %></h3>
+              <p><%- resto.description %></p>
+            </div>
+          </div>
+          <% } %>  
+        </div>
+      </section>
+    <!-- speciality section ends -->
+
+    <!-- steps section starts -->
+      <section class="steps">
+
+        <%-include('../partials/order.ejs') %>
+   
+      </section>
+    <!-- steps section ends -->
+
+
+    <!-- footer section starts -->
+      <section class="footer">
+
+        <%-include('../partials/footer.ejs') %>
+      </section>
+    <!-- footer section ends -->
+
+
+    <%-include('../partials/script.ejs') %>
+   
+
+
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="css/drink.css">
+</head>
+<body>
+    
+    <!-- navbaar starts -->
+        <header>
+            <%-include('../partials/navbar.ejs') %>
+        </header>
+    <!-- navbaar ends -->
+
+    <!-- home section starts -->
+        <section class="home" id="home">
+
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRyaW5rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+        </section>
+    <!-- home section ends -->
+
+    <!-- caffee start -->
+        <section class="popular" id="popular">
+
+            <h1 class="heading">Caffée</h1>
+
+            <div class="box-container">
+                <% for(drink of caffees) { %>
+                <% if(drink.type= 'caffee') {%>
+                <div class="box">
+                    <span class="price"><%- drink.price %> TND </span>
+                    <img src="<%- drink.image %>" alt="">
+                    <h3><%- drink.name %></h3>
+                    <a href="" class="btn">Order Now</a>
+                </div>
+                <% } %> 
+                <% } %>  
+            </div>
+        </section>
+     <!-- Caffee ends -->
+
+    <!-- jus start -->
+        <section class="popular" id="popular">
+
+            <h1 class="heading">Juice</h1>
+
+            <div class="box-container">
+                <% for(drink of juices) { %>
+                    <% if(drink.type= 'juice') {%>
+                <div class="box">
+                    <span class="price"><%- drink.price %> TND </span>
+                    <img src="<%- drink.image %>" alt="">
+                    <h3><%- drink.name %></h3>
+                    <a href="" class="btn">Order Now</a>
+                </div>
+                <% } %> 
+                <% } %>  
+            </div>
+        </section>
+     <!-- jus ends -->
+
+    <!-- jus start -->
+        <section class="popular" id="popular">
+
+            <h1 class="heading">Offer</h1>
+          
+            <div class="box-container">
+                <% for(drink of offers) { %>
+                    <% if(drink.type= 'offre') {%>
+                <div class="box">
+                    <span class="price"><%- drink.price %>  TND </span>
+                    <img src="<%- drink.image %>" alt="">
+                    <h3><%- drink.name %></h3>
+                    <a href="" class="btn">Order Now</a>
+                </div>
+                <% } %> 
+                <% } %>     
+            </div>
+        </section>
+     <!-- jus ends -->
+
+        <!-- footer section starts -->
+        <section class="footer">
+            <%-include('../partials/footer.ejs') %>  
+        </section>
+    <!-- footer section ends -->
+
+
+
+    
+    <%-include('../partials/script.ejs') %>
+
+</body>
+</html>
